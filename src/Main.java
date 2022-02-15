@@ -21,8 +21,12 @@ public class Main
             for more info on try-catch syntax (not required for this course),
             check out https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html */
 
-        //try {
-        //  harry.animate();
-        //} catch (Exception e) { }
+//        try {
+//          harry.animate();
+//        } catch (Exception e) { }
+
+        try {
+            harry.animate2();
+        } catch (Exception e) { }
     }
 }

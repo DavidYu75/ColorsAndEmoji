@@ -1,4 +1,5 @@
 // credit to Mr. Das for the code used in this example!
+import java.util.Arrays;
 
 public class Caterpillar
 {
@@ -15,6 +16,10 @@ public class Caterpillar
 
     // emoji example (unicode)
     private final String GREEN_APPLE_EMOJI = "\uD83C\uDF4F";
+    private final String TOP_LEFT_CORNER = "\u250C";
+    private final String TOP_RIGHT_CORNER = "\u2510";
+    private final String BOTTOM_LEFT_CORNER = "\u2514";
+    private final String BOTTOM_RIGHT_CONRER = "\u2518";
 
     // instance variable
     private String name;
@@ -174,5 +179,42 @@ public class Caterpillar
         System.out.println("(\")__)__)__)__)__)__)");
         System.out.println(" ^ \"\" \"\" \"\" \"\" \"\" \"\"\"");
         System.out.println(RED + name + ": CHOMP CHOMP YUM!" + WHITE);
+    }
+
+    public void animate2() throws InterruptedException {
+        String[] symbols = {"-", "\\", "|", "/",};
+
+        System.out.print(BROWN + TOP_LEFT_CORNER);
+        Thread.sleep(500);
+
+        System.out.println(BLUE + TOP_RIGHT_CORNER);
+        Thread.sleep(500);
+
+        System.out.print(PURPLE + BOTTOM_LEFT_CORNER);
+        Thread.sleep(500);
+
+        System.out.println(RED + BOTTOM_RIGHT_CONRER);
+        Thread.sleep(500);
+
+        int index = 0;
+        for (int i = 0; i < 8; i++) {
+            System.out.print(BROWN + TOP_LEFT_CORNER + CYAN + "---");
+            //Thread.sleep(500);
+
+            System.out.println(BLUE + TOP_RIGHT_CORNER);
+            //Thread.sleep(500);
+
+            System.out.println("  " + BLUE_BRIGHT + symbols[index]);
+
+            System.out.print(PURPLE + BOTTOM_LEFT_CORNER + WHITE + "---");
+            //Thread.sleep(500);
+
+            System.out.println(RED + BOTTOM_RIGHT_CONRER);
+            Thread.sleep(500);
+            index++;
+            if (index == 4) {
+                index = 0;
+            }
+        }
     }
 }
