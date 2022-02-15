@@ -181,40 +181,4 @@ public class Caterpillar
         System.out.println(RED + name + ": CHOMP CHOMP YUM!" + WHITE);
     }
 
-    public void animate2() throws InterruptedException {
-        String[] symbols = {"-", "\\", "|", "/",};
-
-        System.out.print(BROWN + TOP_LEFT_CORNER);
-        Thread.sleep(500);
-
-        System.out.println(BLUE + TOP_RIGHT_CORNER);
-        Thread.sleep(500);
-
-        System.out.print(PURPLE + BOTTOM_LEFT_CORNER);
-        Thread.sleep(500);
-
-        System.out.println(RED + BOTTOM_RIGHT_CONRER);
-        Thread.sleep(500);
-
-        int index = 0;
-        for (int i = 0; i < 8; i++) {
-            System.out.print(BROWN + TOP_LEFT_CORNER + CYAN + "---");
-            //Thread.sleep(500);
-
-            System.out.println(BLUE + TOP_RIGHT_CORNER);
-            //Thread.sleep(500);
-
-            System.out.println("  " + BLUE_BRIGHT + symbols[index]);
-
-            System.out.print(PURPLE + BOTTOM_LEFT_CORNER + WHITE + "---");
-            //Thread.sleep(500);
-
-            System.out.println(RED + BOTTOM_RIGHT_CONRER);
-            Thread.sleep(500);
-            index++;
-            if (index == 4) {
-                index = 0;
-            }
-        }
-    }
 }

@@ -25,8 +25,9 @@ public class Main
 //          harry.animate();
 //        } catch (Exception e) { }
 
+        Clock clock1 = new Clock("clock1");
         try {
-            harry.animate2();
+            clock1.animate2();
         } catch (Exception e) { }
     }
 }
